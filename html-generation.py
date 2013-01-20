@@ -17,7 +17,7 @@ if __name__ == "__main__":
     template = loader.load('base.html')
 
     lexer = pygments.lexers.PythonLexer()
-    formatter = pygments.formatters.HtmlFormatter(cssclass='highlight', style='monokai', linenos='inline', nobackground=False) # TODO get start lineno right
+    formatter = pygments.formatters.HtmlFormatter(cssclass='highlight', style='monokai', linenos='inline')
 
     cssfilename = './style.css'
     cssfile = open(cssfilename, 'w')
@@ -25,6 +25,7 @@ if __name__ == "__main__":
     cssfile.close()
 
     def highlight(code):
+        formatter.linenostart = code.min_line + 1
         return pygments.highlight(code.body, lexer, formatter)
 
     styled_functions = map(highlight, functions)

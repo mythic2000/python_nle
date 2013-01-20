@@ -22,3 +22,11 @@ The tools works in the following steps:
 #. Convert the function bodies into syntax highlighted HTML blocks via pygments.
 #. Combine a tornado template, base style sheet, the pygments style sheet, and the styled function HTML blocks into a single HTML file.
 #. The tornado template HTML contains the jQuery UI code to make each block draggable.
+
+Further Directions
+------------------
+
+- Make the code interactive via some sort of HTML-based editor
+- Handle multiple files
+- Link call sites to definitions somehow (SVG instead of HTML?)
+- Turn it into either a full web app or an embedded Webkit app to make it a real editor
