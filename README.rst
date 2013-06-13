@@ -2,6 +2,8 @@
 README
 ======
 
+Now developed and hosted on bitbucket: https://bitbucket.org/singerb/python_nle.
+
 Overview
 --------
 
